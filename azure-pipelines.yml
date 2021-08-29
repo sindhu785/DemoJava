@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: ubuntu-latest
@@ -12,6 +12,7 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: |
-      javac adding.java
-      java AddTwoNumbers 
+        script: |
+          javac adding.java
+          
+          java Sum
